@@ -1,6 +1,5 @@
 import mimetypes
 import pathlib
-import urllib
 import os
 import socket
 import json
@@ -105,7 +104,7 @@ def save_data(data):
     #     with open('storage/data.json', 'w') as outfile:
     #         pass
 
-    data_parse = urllib.parse.unquote_plus(data.decode())
+    data_parse = unquote_plus(data.decode())
     data_dict = {key: value for key, value in [el.split('=') for el in data_parse.split('&')]}
     capitals = {}
 
